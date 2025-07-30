@@ -1,3 +1,5 @@
+let listaDeNumerosSorteados = [];
+let numeroMaximoDaLista = 10; // Número máximo da lista de números sorteados
 let numeroSecreto = gerarNumeroAleatorio();
 // let numeroSecreto = 5; // Número secreto para teste
 let tentativas = 1;
@@ -6,6 +8,15 @@ let tentativas = 1;
 function exibirTextoTela(tag, texto) {
     let campoHTML = document.querySelector(tag);
     campoHTML.innerHTML = texto;
+    responsiveVoice.speak(texto, 'Brazilian Portuguese Female', {rate : 1.2});
+    // if ('speechSynthesis' in window) {
+    //     let utterance = new SpeechSynthesisUtterance(texto);
+    //     utterance.lang = 'pt-BR'; 
+    //     utterance.rate = 1.2; 
+    //     window.speechSynthesis.speak(utterance); 
+    // } else {
+    //     console.log("Web Speech API não suportada neste navegador.");
+    // }
 }
 function exibirMensagemInicial() {
     exibirTextoTela('h1', "Jogo do Número Secreto");
@@ -37,7 +48,23 @@ function limparCampo() {
 }
 
 function gerarNumeroAleatorio() {
-    return Math.floor(Math.random() * 10) + 1;
+    // return Math.floor(Math.random() * 10) + 1;
+    let numeroEscolhido = Math.floor(Math.random() * numeroMaximoDaLista) + 1;
+    let quantidadeDeElementosLista = listaDeNumerosSorteados.length;
+
+    if (quantidadeDeElementosLista == numeroMaximoDaLista) {
+        alert("Lista de números sorteados cheia!\n Limpando lista de números sorteados.");
+        listaDeNumerosSorteados = []; // Limpa a lista se já tiver 10 números sorteados
+    }
+
+    if ( listaDeNumerosSorteados.includes(numeroEscolhido)){
+        return gerarNumeroAleatorio(); // Chama a função recursivamente se o número já foi sorteado
+    } else {
+        listaDeNumerosSorteados.push(numeroEscolhido); // Adiciona o número sorteado à lista
+        console.log(`Número sorteado: ${numeroEscolhido}`); // Exibe o número sorteado no console
+        console.log(`Lista de números sorteados: ${listaDeNumerosSorteados}`); // Exibe a lista de números sorteados no console
+        return numeroEscolhido; // Retorna o número se ele não foi sorteado
+    }
 }
 
 function reiniciarJogo() {
