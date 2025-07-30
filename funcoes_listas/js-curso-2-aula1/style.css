@@ -5,29 +5,37 @@
     color: white;
 }
 
+html {
+    font-size: 80%; /* ajusta base para parecer com zoom 80% */
+}
+
 body {
     background: linear-gradient(#1354A5 0%, #041832 33.33%, #041832 66.67%, #01080E 100%);
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden; /* impede overflow causado pela imagem */
+    position: relative;
 }
-
 
 body::before {
     background-image: url("img/code.png");
     background-repeat: no-repeat;
-    background-position: right;
+    background-position: right bottom;
+    background-size: contain; /* evita que a imagem estoure o layout */
     content: "";
     display: block;
     position: absolute;
     width: 100%;
     height: 100%;
     opacity: 0.4;
+    z-index: 0;
 }
 
 .container {
     width: 80%;
+    max-width: 1200px;
     height: 80%;
     display: flex;
     align-items: center;
@@ -36,10 +44,12 @@ body::before {
     border: 1px solid #1875E8;
     box-shadow: 4px 4px 20px 0px rgba(1, 8, 14, 0.15);
     background-image: url("img/Ruido.png");
-    background-size: 100% 100%;
+    background-size: cover;
     position: relative;
+    z-index: 1;
+    overflow: hidden;
+    padding: 2rem;
 }
-
 
 .container__conteudo {
     display: flex;
@@ -50,22 +60,22 @@ body::before {
 
 .container__informacoes {
     flex: 1;
-    padding: 3rem;
+    padding: 2rem;
 }
 
 .container__botao {
     border-radius: 16px;
     background: #1875E8;
-    padding: 16px 24px;
+    padding: 1rem 1.5rem;
     width: 100%;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 700;
     border: none;
     margin-top: 2rem;
 }
 
 .container__texto {
-    margin: 16px 0 16px 0;
+    margin: 1rem 0;
 }
 
 .container__texto-azul {
@@ -74,13 +84,13 @@ body::before {
 
 .container__input {
     width: 100%;
-    height: 72px;
+    height: 4.5rem;
     border-radius: 16px;
     background-color: #FFF;
     border: none;
     color: #1875E8;
     padding: 2rem;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 700;
     font-family: 'Inter', sans-serif;
 }
@@ -92,8 +102,11 @@ body::before {
 
 h1 {
     font-family: 'Chakra Petch', sans-serif;
-    font-size: 72px;
+    font-size: 4rem;
+    line-height: 1.1;
     padding-bottom: 3rem;
+    word-break: break-word;
+    max-width: 100%;
 }
 
 p,
@@ -102,7 +115,7 @@ button {
 }
 
 .texto__paragrafo {
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: 400;
 }
 
@@ -112,29 +125,38 @@ button:disabled {
 
 @media screen and (max-width: 1250px) {
 
+    html {
+        font-size: 70%;
+    }
+
     h1 {
-        font-size: 50px;
+        font-size: 2.5rem;
     }
 
     .container__botao {
-        font-size: 16px;
+        font-size: 1rem;
     }
 
-
     .texto__paragrafo {
-        font-size: 24px;
+        font-size: 1.5rem;
     }
 
     .container__imagem-pessoa {
-        display: none;
+        max-width: 150px !important;
+        width: 150px !important;
+        height: auto !important;
+        object-fit: contain;
+        display: block;
     }
 
     .container__conteudo {
-        display: block;
-        position: inherit;
+        display: flex;
+        align-items: center;
+        position: relative; /* trocar de absolute para relative */
+        gap: 1.5rem;
     }
 
     .container__informacoes {
-        padding: 1rem
+        padding: 1rem;
     }
 }
