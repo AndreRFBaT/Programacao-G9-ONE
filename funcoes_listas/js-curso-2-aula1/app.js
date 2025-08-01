@@ -9,15 +9,8 @@ function exibirTextoTela(tag, texto) {
     let campoHTML = document.querySelector(tag);
     campoHTML.innerHTML = texto;
     responsiveVoice.speak(texto, 'Brazilian Portuguese Female', {rate : 1.2});
-    // if ('speechSynthesis' in window) {
-    //     let utterance = new SpeechSynthesisUtterance(texto);
-    //     utterance.lang = 'pt-BR'; 
-    //     utterance.rate = 1.2; 
-    //     window.speechSynthesis.speak(utterance); 
-    // } else {
-    //     console.log("Web Speech API não suportada neste navegador.");
-    // }
 }
+
 function exibirMensagemInicial() {
     exibirTextoTela('h1', "Jogo do Número Secreto");
     exibirTextoTela('p', "Escolha um número entre 1 e 10");
