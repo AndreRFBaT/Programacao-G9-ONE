@@ -21,7 +21,7 @@ O sistema garante que:
 
 - ✅ **Sorteio aleatório:** Ao clicar em **"Sortear Amigo"**, um nome será escolhido aleatoriamente entre os adicionados e o resultado será exibido na tela.
 
-- ✅ **Acessibilidade com voz (opcional):** A aplicação possui suporte para leitura de tela utilizando a API Web Speech, que pode ser ativada ou desativada por meio de um botão.
+- ✅ **Acessibilidade com voz:** A aplicação possui suporte para leitura de tela utilizando a API Web Speech, que pode ser ativada ou desativada por meio de um botão.
 
 ## 🛠️ Tecnologias utilizadas
 
@@ -30,17 +30,17 @@ O sistema garante que:
 - JavaScript (Vanilla)
 - [Web Speech API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API) (para leitura com voz, opcional)
 
-## 📷 Demonstração (opcional)
+## 📷 Demonstração
 
-> Adicione aqui um GIF ou captura de tela do projeto em funcionamento, se desejar.
+![alt text](image.png)
 
 ## 📦 Como usar
 
 1. Clone este repositório ou baixe os arquivos.
-2. Abra o arquivo `index.html` em seu navegador.
+2. Abra o arquivo [Jogo do amigo secreto](https://sorteioamigosecreto-14bxiwyhf.vercel.app/) em seu navegador.
 3. Digite os nomes dos participantes e clique em **"Adicionar"**.
 4. Após adicionar todos os nomes, clique em **"Sortear Amigo"**.
-5. (Opcional) Ative a leitura em voz alta clicando no botão de fala.
+5. Ative a leitura em voz alta clicando no botão de fala.
 
 ## 💡 Possíveis melhorias futuras
 
