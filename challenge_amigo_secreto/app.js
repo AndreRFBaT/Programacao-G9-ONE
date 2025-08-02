@@ -2,6 +2,34 @@
 
 let listaDeAmigos = [];
 let amigoSorteado = '';
+let falaHabilitada = false;
+
+
+function falarTextoTela(texto) {
+    if (falaHabilitada && 'speechSynthesis' in window) {
+        let utterance = new SpeechSynthesisUtterance(texto);
+        utterance.lang = 'pt-BR';
+        utterance.rate = 1.2;
+        window.speechSynthesis.speak(utterance);
+    } else if(!('speechSynthesis' in window)) {
+        console.log("Web Speech API não suportada neste navegador.");
+    }
+}
+
+
+function alternarFala() {
+    falaHabilitada = !falaHabilitada;
+
+    const botao = document.getElementById('botao-fala');
+    botao.textContent = falaHabilitada ? '🔈 Fala: Ligada' : '🔇 Fala: Desligada';
+
+    if (falaHabilitada) {
+        const titulo = document.querySelector('.main-title')?.textContent;
+        const instrucao = document.querySelector('.section-title')?.textContent;
+        if (titulo) falarTextoTela(titulo);
+        if (instrucao) falarTextoTela(instrucao);
+    }
+}
 
 
 function adicionarAmigo() {
@@ -19,6 +47,7 @@ function adicionarAmigo() {
         alert("Este nome já está na lista de amigos.");
         return;
     }
+
     // Adiciona o nome à lista de amigos
     listaDeAmigos.push(nome);
     console.log(`Nome adicionado: ${nome}`);
@@ -27,6 +56,7 @@ function adicionarAmigo() {
     atualizarListaAmigos();
     // Limpa o resultado anterior
     document.getElementById('resultado').textContent = '';
+    falarTextoTela(`Amigo ${nome} adicionado com sucesso!`);
 }
 
 function atualizarListaAmigos() {
@@ -65,8 +95,10 @@ function mostrarAmigoSorteado() {
         alert("Nenhum amigo foi sorteado ainda.");
         return;
     }
+    let mensagem = `O amigo secreto sorteado foi: ${amigoSorteado}`;
     let ul = document.getElementById('resultado');
-    ul.textContent = `O amigo secreto sorteado: ${amigoSorteado}`;
+    ul.textContent = mensagem;
     console.log(`Resultado exibido: ${amigoSorteado}`);
+    falarTextoTela(mensagem);
 
 }
