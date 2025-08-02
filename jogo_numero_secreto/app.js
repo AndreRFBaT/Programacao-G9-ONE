@@ -3,13 +3,47 @@ let numeroMaximoDaLista = 10; // Número máximo da lista de números sorteados
 let numeroSecreto = gerarNumeroAleatorio();
 // let numeroSecreto = 5; // Número secreto para teste
 let tentativas = 1;
+// habilita fala
+let falaHabilitada = true;
+
 
 
 function exibirTextoTela(tag, texto) {
     let campoHTML = document.querySelector(tag);
     campoHTML.innerHTML = texto;
-    responsiveVoice.speak(texto, 'Brazilian Portuguese Female', {rate : 1.2});
+    // responsiveVoice.speak(texto,'Brazilian Portuguese Female', {rate : 1.2});
+    if (falaHabilitada && 'speechSynthesis' in window) {
+        let utterance = new SpeechSynthesisUtterance(texto);
+        utterance.lang = 'pt-BR';
+        utterance.rate = 1.2;
+        window.speechSynthesis.speak(utterance);
+    } else if(!('speechSynthesis' in window)) {
+        console.log("Web Speech API não suportada neste navegador.");
+    }
 }
+
+
+function alternarFala() {
+    falaHabilitada = !falaHabilitada;
+
+    const botao = document.getElementById('botao-fala');
+    botao.textContent = falaHabilitada ? '🔈 Fala: Ligada' : '🔇 Fala: Desligada';
+
+    if (falaHabilitada) {
+        const titulo = document.querySelector('h1').textContent;
+        const paragrafo = document.querySelector('p').textContent;
+
+        if (titulo) {
+            // Fala o título se ele existir
+            exibirTextoTela('h1', titulo);
+        }
+        // Verifica se o parágrafo existe antes de tentar falar
+        if (paragrafo) {
+            exibirTextoTela('p', paragrafo);
+        }
+    }
+}
+
 
 function exibirMensagemInicial() {
     exibirTextoTela('h1', "Jogo do Número Secreto");
