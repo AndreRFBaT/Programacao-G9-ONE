@@ -1,5 +1,13 @@
 # Projeto G9 - Formação ONE
 
+## Deploys dos games 🤘
+### 🎮 Jogos disponíveis para jogar online :
+
+[Tente adivinhar o número secreto](https://jogonumerosecreto-pied-three.vercel.app/)
+
+[Sorteio Amigo Secreto](https://sorteioamigosecreto-14bxiwyhf.vercel.app/)
+
+
 ## Sobre o Projeto
 
 O Projeto G9 é uma iniciativa prática da formação ONE (Oracle Next Education), voltada ao desenvolvimento de habilidades técnicas essenciais nas principais áreas da tecnologia: **Desenvolvimento Web**, **Back-End** e **Ciência de Dados com Inteligência Artificial**. O projeto serve como ambiente de aplicação real dos conhecimentos adquiridos, promovendo uma experiência completa para estudantes que desejam atuar no mercado de tecnologia.
