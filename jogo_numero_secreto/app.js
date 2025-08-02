@@ -4,7 +4,7 @@ let numeroSecreto = gerarNumeroAleatorio();
 // let numeroSecreto = 5; // Número secreto para teste
 let tentativas = 1;
 // habilita fala
-let falaHabilitada = true;
+let falaHabilitada = false;
 
 
 
