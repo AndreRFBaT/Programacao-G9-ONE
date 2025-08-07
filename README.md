@@ -7,7 +7,7 @@
 
 [Sorteio Amigo Secreto](https://sorteioamigosecreto-14bxiwyhf.vercel.app/)
 
-[perfil online com links para contado](https://perfilhtml-5265yvr6m-andre-r-f-batistas-projects-18feb53f.vercel.app/)
+[Perfil online com links para contado](https://perfilhtml-5265yvr6m-andre-r-f-batistas-projects-18feb53f.vercel.app/)
 
 
 ## Sobre o Projeto
