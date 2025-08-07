@@ -1,0 +1,103 @@
+/* Google fonts Krona One */
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+/* Google fonts Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Reset styles */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Base styles */
+body {
+    height: 100vh;
+    box-sizing: border-box;
+    background-color: black;
+    color: white;
+}
+/* destaques */
+.titulo-destaque, .apresentacao__conteudo__paragrafo__destaque {
+    color: #22D4FD;
+    border: 1px solid #22D4FD;
+    padding: 1px;
+    border-radius: 6px;
+    white-space: nowrap;
+    /* padding: auto; */
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.nome-destaque {
+    color: #ff1e00;
+    font-weight: bold;
+}
+
+/*layout principal*/
+.apresentacao {
+    margin: 5% 8%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    /* gap: 40px; */
+}
+
+.apresentacao__conteudo {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.apresentacao__conteudo__titulo {
+    font-size: 24px;
+    font-family: "Krona One", sans-serif;
+
+}
+
+.apresentacao__conteudo__paragrafo {
+    font-size: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+}
+
+.apresentacao__conteudo__paragrafo__destaque {
+    color: #22D4FD;
+    font-weight: bold;
+}
+
+.apresentacao__conteudo__links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 25px;
+}
+
+.apresentacao__imagem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagem {
+    width: 450px;
+    height: auto;
+    /* object-fit: cover; */
+    box-shadow: 15px 15px 30px rgba(255, 0, 0, 0.5); /* Sombra vermelha lateral e inferior */
+    border-radius: 8px;   /* Opcional: deixa os cantos levemente arredondados */
+}
+
+.apresentacao__conteudo__links__link {
+    background-color: #22D4FD;
+    width: 280px;
+    text-align: center;
+    border-radius: 16px;
+    font-size: 20px;
+    padding: 21.5px 0;
+    text-decoration: none;
+    color: #000000;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+}
