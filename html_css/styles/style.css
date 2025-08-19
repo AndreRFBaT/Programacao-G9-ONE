@@ -1,0 +1,219 @@
+/* Google fonts Krona One */
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+/* Google fonts Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Reset styles */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Base styles */
+body {
+    /* height: 100vh; */
+    box-sizing: border-box;
+    background-color: black;
+    color: white;
+}
+
+.cabecalho {
+    /* display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 32px;
+    background-color: #1a1a1a; */
+    padding: 2% 0% 0% 8%;
+
+}
+
+.cabecalho__navegacao {
+    display: flex;
+    gap: 60px;
+}
+
+.cabecalho__navegacao__link{
+    font-family: "Montserrat", sans-serif;
+    font-size: 24;
+    font-weight: 600;
+    color: #22D4FD;
+    text-decoration: none;
+}
+
+
+
+/* destaques */
+.titulo-destaque, .apresentacao__conteudo__paragrafo__destaque {
+    color: #22D4FD;
+    border: 1px solid #22D4FD;
+    padding: 1px;
+    border-radius: 6px;
+    white-space: nowrap;
+    /* padding: auto; */
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.titulo-destaque-email {
+    color: #22D4FD;
+    padding: 5px;
+    border-radius: 10px;
+    white-space: nowrap;
+    margin-top: 10px;
+    display: inline-block;
+    text-decoration: none; /* tira o sublinhado do link */
+    border: 1px solid transparent; /* deixa pronto pro hover */
+    transition: all 0.3s ease-in-out; /* animação suave */
+}
+
+.titulo-destaque-email:hover {
+    background-color: #ffffff;
+    color: #000000; /* cor do texto no hover */
+    font-weight: bold;
+    box-shadow: 10px 10px 50px #22D4FD;
+    border: 2px solid #000000;
+}
+
+.nome-destaque {
+    color: #ff1e00;
+    font-weight: bold;
+}
+
+
+/*layout principal*/
+.apresentacao {
+    /* margin: 5% 8%; */
+    padding: 5% 8%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    /* gap: 40px; */
+}
+
+.apresentacao__conteudo {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.apresentacao__conteudo__titulo {
+    font-size: 24px;
+    font-family: "Krona One", sans-serif;
+
+}
+
+.apresentacao__conteudo__paragrafo {
+    font-size: 18px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+}
+
+.apresentacao__conteudo__paragrafo__destaque {
+    color: #22D4FD;
+    font-weight: bold;
+}
+
+.apresentacao__conteudo__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 15px;
+    gap: 15px;
+    align-items: center;
+}
+.apresentacao__conteudo__links__subtitulo {
+    font-size: 20px;
+    font-weight: 100;
+    font-family: "Krona One", sans-serif;
+    /* color: #22D4FD; */
+    /* margin-bottom: 10px; */
+}
+
+.apresentacao__conteudo__links__link {
+    /* background-color: #22D4FD; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    border: 2px solid #22D4FD;
+    box-shadow: 10px 2px 15px rgba(34, 212, 253, 0.5);
+    width: 378px;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 20px;
+    padding: 10px 0;
+    text-decoration: none;
+    color: #f6f6f6;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    &:hover {
+        background-color: #ffffff;
+        color: #000000;
+        font-weight: bold;
+        box-shadow: 10px 10px 50px #22D4FD;
+        transition: all 0.5s ease-in-out;
+        /* border-radius: 10%; */
+        border: 2px solid #000;
+        box-sizing: content-box;
+    }
+
+}
+.image_link {
+    width: 20px;
+    height: 20px;
+}
+
+.apresentacao__imagem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagem {
+    width: 450px;
+    height: auto;
+    /* object-fit: cover; */
+    box-shadow: 10px 10px 30px #22D4FD; /* Sombra vermelha lateral e inferior */
+    border-radius: 8px;   /* Opcional: deixa os cantos levemente arredondados */
+}
+
+
+.footer {
+    background-color: #22D4FD;
+    color: #000000;
+    padding: 24px;
+    text-align: center;
+}
+
+
+
+/* ################################################################################ */
+/* Pagina about */
+
+.apresentacao__conteudo--duas-colunas {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* duas colunas */
+    gap: 40px;
+    width: 100%;
+    max-width: 1200px;
+    align-items: start;
+}
+
+@media (max-width: 768px) {
+    .apresentacao__conteudo--duas-colunas {
+        grid-template-columns: 1fr; /* mobile volta pra 1 coluna */
+    }
+}
+
+.apresentacao__conteudo__lista {
+    align-self: flex-start;
+    gap: 20px;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+    margin-left: 20px;
+}
