@@ -5,10 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portifólio</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
-    <header></header>
+
+    <header class="cabecalho">
+        <nav class="cabecalho__navegacao">
+            <a class = "cabecalho__navegacao__link" href="index.html">Home</a>
+            <a class = "cabecalho__navegacao__link" href="projects.html">Projetos</a>
+            <a class = "cabecalho__navegacao__link" href="about.html">Sobre mim</a>
+        </nav>
+    </header>
+
     <main class = "apresentacao">
 
         <section class = "apresentacao__conteudo">
@@ -20,15 +28,24 @@
                 </p>
 
                 <div class = "apresentacao__conteudo__links">
-                    <a class = "apresentacao__conteudo__links__link" href="https://www.linkedin.com/in/andre-rodrigues-de-freitas-batista/">LinkedIn</a>
-                    <a class = "apresentacao__conteudo__links__link" href="https://github.com/AndreRFBaT">GitHub</a>
+                    <h2 class = "apresentacao__conteudo__links__subtitulo">Acesse minhas redes:</h2>
+                    <a class = "apresentacao__conteudo__links__link" href="https://github.com/AndreRFBaT">
+                        <img src="./assets/github.png" alt="Logo do GitHub">
+                        GitHub
+                    </a>
+                    <a class = "apresentacao__conteudo__links__link" href="https://www.linkedin.com/in/andre-rodrigues-de-freitas-batista/">
+                        <img src="./assets/linkedin.png" alt="Logo do LinkedIn">
+                        LinkedIn
+                    </a>
                 </div>
             </section>
                 <div class="apresentacao__imagem">
-                    <img class="imagem" src="imagens/466927884_8937628186301555_2566087931324914936_n.jpg" alt="Imagem de Andre R. F. Batista">
+                    <img class="imagem" src="./assets/466927884_8937628186301555_2566087931324914936_n.jpg" alt="Imagem de Andre R. F. Batista">
                 </div>
-
     </main>
-    <footer></footer>
+
+    <footer class="footer">
+        <p>Desenvolvido por Andre R. F. Batista</p>
+    </footer>
 </body>
 </html>
