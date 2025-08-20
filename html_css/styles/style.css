@@ -204,6 +204,60 @@ body {
     text-align: center;
 }
 
+/* ################################################################################ */
+/* Pagina projetos */
+
+.projetos__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 2rem;
+    max-width: 1200px;
+
+}
+
+.projeto__card {
+    background-color: var(--cor-primaria);
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0px 2px 8px var(--cor-terciaria);
+}
+
+.projeto__card h2 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.projeto__card p {
+    margin-bottom: 12px;
+}
+
+.projeto__card a {
+    color: var(--cor-terciaria);
+    text-decoration: none;
+    font-weight: bold;
+    &:hover {
+        &:hover {
+        background-color: var(--cor-secundaria);
+        color: var(--cor-primaria);
+        font-weight: bold;
+        padding: 8px 12px;
+        box-shadow: 1px 1px 20px var(--cor-terciaria);
+        transition: all 0.3s ease-in-out;
+        /* border-radius: 10%; */
+        border: 1px solid var(--cor-primaria);
+        border-radius: 15px;
+        box-sizing: content-box;
+        font-size: 16px;
+    }
+    }
+}
+
+.projeto__card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 12px var(--cor-terciaria), 0 0 24px var(--cor-terciaria);
+}
+
 
 
 /* ################################################################################ */
