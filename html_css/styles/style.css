@@ -57,6 +57,7 @@ body {
     border: 1px solid var(--cor-terciaria);
     padding: 1px;
     border-radius: 6px;
+    border-color: var(--cor-primaria);
     white-space: nowrap;
     /* padding: auto; */
     margin-top: 10px;
