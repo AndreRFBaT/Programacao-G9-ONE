@@ -3,6 +3,15 @@
 /* Google fonts Montserrat */
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+:root {
+    --cor-primaria: #000000;
+    --cor-secundaria: #ffffff;
+    --cor-terciaria: #22D4FD;
+
+    --fonte-principal: "Krona One", sans-serif;
+    --fonte-secundaria: "Montserrat", sans-serif;
+}
+
 /* Reset styles */
 *{
     margin: 0;
@@ -13,7 +22,7 @@
 body {
     /* height: 100vh; */
     box-sizing: border-box;
-    background-color: black;
+    background-color: var(--cor-primaria);
     color: white;
 }
 
@@ -33,10 +42,10 @@ body {
 }
 
 .cabecalho__navegacao__link{
-    font-family: "Montserrat", sans-serif;
-    font-size: 24;
+    font-family: var(--fonte-secundaria);
+    font-size: 24px;
     font-weight: 600;
-    color: #22D4FD;
+    color: var(--cor-terciaria);
     text-decoration: none;
 }
 
@@ -44,8 +53,8 @@ body {
 
 /* destaques */
 .titulo-destaque, .apresentacao__conteudo__paragrafo__destaque {
-    color: #22D4FD;
-    border: 1px solid #22D4FD;
+    color: var(--cor-terciaria);
+    border: 1px solid var(--cor-terciaria);
     padding: 1px;
     border-radius: 6px;
     white-space: nowrap;
@@ -55,7 +64,7 @@ body {
 }
 
 .titulo-destaque-email {
-    color: #22D4FD;
+    color: var(--cor-terciaria);
     padding: 5px;
     border-radius: 10px;
     white-space: nowrap;
@@ -64,18 +73,24 @@ body {
     text-decoration: none; /* tira o sublinhado do link */
     border: 1px solid transparent; /* deixa pronto pro hover */
     transition: all 0.3s ease-in-out; /* animação suave */
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    font-size: 40px;
+    font-weight: bold;
 }
 
 .titulo-destaque-email:hover {
-    background-color: #ffffff;
-    color: #000000; /* cor do texto no hover */
+    background-color: var(--cor-secundaria);
+    color: var(--cor-primaria);
     font-weight: bold;
-    box-shadow: 10px 10px 50px #22D4FD;
-    border: 2px solid #000000;
+    box-shadow: 10px 10px 50px var(--cor-terciaria);
+    border: 2px solid var(--cor-primaria);
+    font-size: 50px;
 }
 
 .nome-destaque {
-    color: #ff1e00;
+    color: var(--cor-terciaria);
     font-weight: bold;
 }
 
@@ -101,18 +116,18 @@ body {
 
 .apresentacao__conteudo__titulo {
     font-size: 24px;
-    font-family: "Krona One", sans-serif;
+    font-family: var(--fonte-principal);
 
 }
 
 .apresentacao__conteudo__paragrafo {
     font-size: 18px;
-    font-family: "Montserrat", sans-serif;
+    font-family: var(--fonte-secundaria);
     font-weight: 400;
 }
 
 .apresentacao__conteudo__paragrafo__destaque {
-    color: #22D4FD;
+    color: var(--cor-terciaria);
     font-weight: bold;
 }
 
@@ -127,7 +142,7 @@ body {
 .apresentacao__conteudo__links__subtitulo {
     font-size: 20px;
     font-weight: 100;
-    font-family: "Krona One", sans-serif;
+    font-family: var(--fonte-principal);
     /* color: #22D4FD; */
     /* margin-bottom: 10px; */
 }
@@ -138,26 +153,27 @@ body {
     align-items: center;
     justify-content: center;
     gap: 20px;
-    border: 2px solid #22D4FD;
-    box-shadow: 10px 2px 15px rgba(34, 212, 253, 0.5);
+    border: 2px solid var(--cor-terciaria);
+    box-shadow: 10px 2px 15px var(--cor-terciaria);
     width: 378px;
     text-align: center;
     border-radius: 20px;
     font-size: 20px;
     padding: 10px 0;
     text-decoration: none;
-    color: #f6f6f6;
-    font-family: "Montserrat", sans-serif;
+    color: var(--cor-secundaria);
+    font-family: var(--fonte-secundaria);
     font-weight: 400;
     &:hover {
-        background-color: #ffffff;
-        color: #000000;
+        background-color: var(--cor-secundaria);
+        color: var(--cor-primaria);
         font-weight: bold;
-        box-shadow: 10px 10px 50px #22D4FD;
+        box-shadow: 10px 10px 50px var(--cor-terciaria);
         transition: all 0.5s ease-in-out;
         /* border-radius: 10%; */
-        border: 2px solid #000;
+        border: 2px solid var(--cor-primaria);
         box-sizing: content-box;
+        font-size: 22px;
     }
 
 }
@@ -176,14 +192,14 @@ body {
     width: 450px;
     height: auto;
     /* object-fit: cover; */
-    box-shadow: 10px 10px 30px #22D4FD; /* Sombra vermelha lateral e inferior */
+    box-shadow: 10px 10px 30px var(--cor-terciaria); /* Sombra vermelha lateral e inferior */
     border-radius: 8px;   /* Opcional: deixa os cantos levemente arredondados */
 }
 
 
 .footer {
-    background-color: #22D4FD;
-    color: #000000;
+    background-color: var(--cor-terciaria);
+    color: var(--cor-primaria);
     padding: 24px;
     text-align: center;
 }
@@ -214,6 +230,15 @@ body {
     text-align: left;
     font-size: 20px;
     font-weight: 400;
-    font-family: "Montserrat", sans-serif;
+    font-family: var(--fonte-secundaria);
     margin-left: 20px;
+}
+
+.apresentacao__conteudo__paragrafo_mailto {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    font-size: 40px;
+    font-weight: bold;
+    color: yellow;
 }
